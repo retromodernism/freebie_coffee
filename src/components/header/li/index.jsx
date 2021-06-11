@@ -16,6 +16,9 @@ const Li = ({ title, href = "#" }) => {
         }
         onMouseEnter={setHover}
         onMouseLeave={unsetHover}
+        style={{
+          transition: "all .3s",
+        }}
       >
         {title}
       </a>
