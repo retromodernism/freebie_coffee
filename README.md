@@ -1,10 +1,10 @@
 # Дизайн
 
-https://www.figma.com/file/YMLK4BwcowltWe0ZyLgOyrOp/Hunger---Website-Template?node-id=0%3A1
+https://www.figma.com/file/COFJnHB1lL47wFuw42t1Tx/Freebie_Coffee?node-id=0%3A2
 
 # Страница
 
-https://retromodernism-hunger.netlify.app/
+https://retromodernism-freebie-coffee.netlify.app/
 
 # Getting Started with Create React App
 
