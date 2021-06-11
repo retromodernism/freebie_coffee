@@ -1,3 +1,104 @@
-@use './../../variables/colors.scss';
-.Coffee {
+@import "./../../variables/colors.scss";
+.coffee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .coffee__h3 {
+    margin: 90px 0 6px 0;
+  }
+  .coffee__h2 {
+  }
+  .coffee__bg {
+    position: absolute;
+    left: 0;
+    width: 384px;
+    height: 894px;
+    background: $PrimaryColor;
+  }
+  .coffee__swiper {
+    margin-top: 72px;
+    padding-left: 130px;
+    width: 1920px;
+    .swiper-button-prev::after {
+      position: absolute;
+      left: 48px;
+      content: "";
+      height: 48px;
+      width: 48px;
+      background: url(./src/arrow.svg) no-repeat -100% 100%;
+
+      transform: rotate(-180deg);
+    }
+    .swiper-button-next::after {
+      position: absolute;
+      right: 540px;
+      content: "";
+
+      height: 48px;
+      width: 48px;
+
+      background: url(./src/arrow.svg) no-repeat 100% 100%;
+    }
+    .swiper-wrapper {
+      .coffee__swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 544px;
+        position: relative;
+
+        opacity: 0.3;
+        transition: opacity 0.3s ease-in-out;
+        &.swiper-slide-active {
+          filter: drop-shadow(0px 4px 24px rgba(205, 205, 205, 0.5));
+        }
+        &.swiper-slide-next,
+        &.swiper-slide-active {
+          opacity: 1;
+        }
+        .coffee__swiper-slide-product {
+        }
+      }
+    }
+  }
+}
+
+.product-card {
+  display: flex;
+  width: 560px;
+  background: #ffffff;
+  .product-card__picture {
+    .product-card__img {
+      flex-basis: 235px;
+      height: 256px;
+      object-fit: cover;
+    }
+  }
+  .product__card-info {
+    padding: 42px;
+    display: flex;
+    flex-direction: column;
+    .product-card__price {
+      margin-bottom: 8px;
+    }
+    .product-card__title {
+      margin-bottom: 24px;
+    }
+    .product-card__p {
+      margin-bottom: 18px;
+    }
+    .product-card__footer {
+      .product-card__button {
+        background: $AccentColor1;
+        border-radius: 19px;
+        padding: 7px 16px;
+      }
+      .product-card__link-details {
+        margin-left: 18px;
+        color: $PrimaryColor;
+      }
+    }
+  }
 }
