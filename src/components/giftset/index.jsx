@@ -1,8 +1,7 @@
+import "swiper/components/pagination/pagination.scss";
+import "./index.scss";
 import "swiper/swiper.scss";
 import "swiper/components/effect-flip/effect-flip.scss";
-import "swiper/components/pagination/pagination.scss";
-
-import "./index.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectFlip, Pagination } from "swiper/core";
