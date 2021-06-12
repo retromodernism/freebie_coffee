@@ -12,8 +12,8 @@ function App() {
       <Header />
       <Features />
       <Coffee />
-      <Combo />
       <Giftset />
+      <Combo />
       <Footer />
     </div>
   );

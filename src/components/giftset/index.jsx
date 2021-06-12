@@ -81,7 +81,7 @@ const Giftset = (props) => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="giftset__swiper-slide" key={1}>
+        <SwiperSlide className="giftset__swiper-slide" key={2}>
           <picture className="giftset__swiper-slide-picture">
             <source srcSet={img} media="(min-width: 0)" />
             <img src="#" className="giftset__swiper-slide-img" alt="" />
@@ -130,7 +130,7 @@ const Giftset = (props) => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="giftset__swiper-slide" key={1}>
+        <SwiperSlide className="giftset__swiper-slide" key={3}>
           <picture className="giftset__swiper-slide-picture">
             <source srcSet={img} media="(min-width: 0)" />
             <img src="#" className="giftset__swiper-slide-img" alt="" />

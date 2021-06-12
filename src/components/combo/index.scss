@@ -1,3 +1,141 @@
-@use './../../variables/colors.scss';
+@import "./../../variables/colors.scss";
 .combo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  padding: 88px 0 128px 0;
+
+  overflow: hidden;
+  .combo__h3 {
+    margin-bottom: 6px;
+  }
+  .combo__h2 {
+    margin-bottom: 64px;
+  }
+  .combo__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 326px;
+    height: 906px;
+    background: $PrimaryColor;
+  }
+  .combo__swiper {
+    width: 1536px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 564px;
+      width: 132px;
+      background: #f9fbff;
+      z-index: 1;
+    }
+
+    .swiper-button-prev {
+      position: absolute;
+      left: 66px;
+      right: unset;
+
+      height: 48px;
+      width: 48px;
+      &::after {
+        content: "";
+        height: 48px;
+        width: 48px;
+        background: url(./../coffee/src/arrow.svg) no-repeat -100% 100%;
+        transform: rotate(-180deg);
+      }
+    }
+    .swiper-button-next {
+      position: absolute;
+      left: 1286px;
+      right: unset;
+      height: 48px;
+      width: 48px;
+      &::after {
+        content: "";
+        height: 48px;
+        width: 48px;
+        background: url(./../coffee/src/arrow.svg) no-repeat -100% 100%;
+      }
+    }
+    .swiper-wrapper {
+      // margin-left: 132px;
+      padding-left: 132px;
+      position: relative;
+
+      .combo__swiper-slide {
+        transition: opacity 0.3s ease-in-out;
+        &.swiper-slide-active
+          + .combo__swiper-slide
+          + .combo__swiper-slide
+          + .combo__swiper-slide {
+          opacity: 0.3;
+        }
+        .combo__swiper-slide-card {
+        }
+      }
+    }
+  }
+}
+
+.combo-card {
+  width: 360px;
+  height: 564px;
+  .combo-card__picture {
+    .combo-card__img {
+      width: 360px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+  .combo-card__info {
+    padding: 42px;
+    background: #ffffff;
+    .combo-card__info-prices {
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 9px;
+      // .combo-card__info-price {
+      // }
+      .combo-card__info-old-price {
+        margin-left: 20px;
+
+        font-family: Nunito;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        text-decoration-line: line-through;
+
+        color: $PrimaryColor;
+      }
+    }
+    .combo-card__info-title {
+      margin-bottom: 10px;
+    }
+    .combo-card__info-p {
+      margin-bottom: 32px;
+    }
+    .combo-card__info-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .combo-card__info-footer-button {
+        cursor: pointer;
+        background: $AccentColor1;
+        border-radius: 19px;
+        padding: 7px 16px;
+        min-width: 134px;
+      }
+      .combo-card__info-footer-a {
+        color: $PrimaryColor;
+      }
+    }
+  }
 }
